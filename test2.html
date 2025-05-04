@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Flexbox Background Image Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 500px;
+      height: 500px;
+      background-image: url("https://picsum.photos/id/100/500/500");
+      background-size: cover;
+      background-position: center;
+      animation: background-move 10s infinite alternate;
+    }
+
+    @keyframes background-move {
+      0% {
+        background-position: left top;
+      }
+      50% {
+        background-position: right bottom;
+      }
+      100% {
+        background-position: left top;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+</body>
+</html>
